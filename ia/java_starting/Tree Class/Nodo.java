@@ -27,5 +27,5 @@ public class Nodo{
         Nodo hijo = new Nodo(5,1);
         padre.generar_hijos(10,hijo);
     }
-        
+        //github
 }
