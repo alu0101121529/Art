@@ -6,17 +6,18 @@ public class nodo {
     public Float costeheuristica;
     private Vector<Integer> padres = new Vector<Integer>();
     public ArrayList<nodo> hijos = new ArrayList<nodo>();
-    private int id_;
+	private int id_;
+	boolean generado=false;
 
-    
-    
     public nodo(Float coste, int ID, Float heuristica){
         this.coste= coste;
         this.id_=ID;
         this.costeheuristica=coste+heuristica;
         
     }
-    
+	
+	//GETTER AND SETTER
+
     public Float get_ch() {
     	return costeheuristica;
     }
@@ -33,7 +34,8 @@ public class nodo {
     	return padres;
     }
   
-    //método para la búsqueda
+	//GENERAR HIJOS
+	
     public void generar_hijos(database data,Vector<nodo> open) {
     	boolean es_padre=false;
     	for(int i=0 ; i < data.get_caminos(id_).size() ; i++){
@@ -45,10 +47,13 @@ public class nodo {
     			}
     			if(!es_padre) {
     				nodo child= new nodo(coste+data.get_caminos(id_).get(i),i,data.get_h(id_));
-    				this.hijos.add(child);
+					this.hijos.add(child);
 	        		child.padres = (Vector<Integer>)this.padres.clone(); 
-	        		child.padres.add(this.id_);
-	        		open.add(child);
+					child.padres.add(this.id_);
+					if(!child.padres.contains(child.id_)){
+						open.add(child);
+						generado = true;
+					}
 	    		}
 	    		es_padre=false;
     		}
