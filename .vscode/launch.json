@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - AStar",
+            "request": "launch",
+            "mainClass": "AStar"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - nodo",
             "request": "launch",
             "mainClass": "nodo"

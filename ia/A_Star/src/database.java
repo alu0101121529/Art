@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-ç
+
 public class database {
 	private Vector< Vector <Float> > caminos = new Vector< Vector <Float> >(); //Si el camino no existe el coste es -1
 	private Vector<Float> heuristicas= new Vector<Float>();
@@ -13,7 +13,7 @@ public class database {
 		return this.caminos.get(index);
 	}
 	
-	public database(String file_caminos,  String file_h ) {ç
+	public database(String file_caminos,  String file_h ) {
 		
 		File archivo = null;
 		FileReader fr = null;
@@ -49,7 +49,9 @@ public class database {
 	        				 caminos.get(j).add(coste_t);
 	        			 }	
 	        			 else {
-        				 throw new Exception("No se han podido cargar los nodos");
+	        				 br.close();
+	        				 fr.close();
+	        				 throw new Exception("Faltan caminos en el fichero");
 	        			 }
 	        		 }
 	        	 }
@@ -68,7 +70,9 @@ public class database {
 		        		
 		        	  }	
 		        	  else {
-	        				throw new Exception("No se han podido cargar las heurísticas");
+		        		  br.close();
+		        		  fr.close();
+		        		  throw new Exception("Faltan heuristicas en el fichero");
 		        	  }
 		          }
 	          }
