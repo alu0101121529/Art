@@ -35,9 +35,7 @@ public class AStar {
 			LastID=menor.get_id();
 			if(menor.get_id()==fin) {
 				Analizados++;
-				OpenList.remove(indice_menor);
-				System.out.println("Analizamos: " +  menor.get_id());
-				
+				OpenList.remove(indice_menor);	
 			}else {
 				Analizados++;
 				int old_size=OpenList.size();
