@@ -29,6 +29,9 @@ public class nodo {
 	public int get_id() {
 		return id_;
 	}
+	public int get_id1(){
+		return (id_+1);
+	}
 
 	public Vector<Integer> get_camino() {
 		return padres;

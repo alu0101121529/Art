@@ -9,4 +9,4 @@ end
 puts "Introduce un número: "
 num= gets.to_i
 resultado = factorial(num)
-puts "El resultado es #{resultado}"
+puts "El resultado es #{resultado}" 
