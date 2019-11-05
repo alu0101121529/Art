@@ -54,7 +54,7 @@ public class nodo {
 					child.padres = (Vector<Integer>) this.padres.clone();		// Copiamos el vector de padres del nodo padre al vector de padres del hijo
 					child.padres.add(this.id_); 							// Añadimos al padre al vector de padres del nodo hijo
 					if (!child.padres.contains(child.id_)) {         		// Hacemos una segunda comprobación que no se ha metido un nodo padre de nuevo y ponemos al nodo como generado
-						open.add(child);
+						open.add(child);									// Añadimos a los hijos a la lista de nodos a analizar
 						generado = true;
 					}
 				}
