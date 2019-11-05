@@ -6,18 +6,18 @@ import java.io.PrintWriter;
 
 
 public class AStar {
-	private Vector<nodo> OpenList = new Vector<nodo>(); // Lista de nodos que se van a estudiar en cada iteración
-	private database info; // Base de datos donde se guardarán la información conseguida en los ficheros
+	private Vector<nodo> Nodos_analizar = new Vector<nodo>(); // Lista de nodos que se van a estudiar en cada iteración
+	private elementos_ficheros info; // Base de datos donde se guardarán la información conseguida en los ficheros
 	private int Generados; // Número de nodos generados
 	private int Analizados; // Número de nodos analizados
 
-	public AStar(String file_caminos, String file_h) {
-		info = new database(file_caminos, file_h); // En el constructor solo llenamos la base de datos
+	public AStar(String fichero_caminos, String fichero_heuristicas) {
+		info = new elementos_ficheros(fichero_caminos, fichero_heuristicas); // En el constructor solo llenamos la base de datos
 	}
 
-	public void Search(int inicio, int fin) {
+	public void Busqueda_AStar(int inicio, int fin) {
 		nodo inicial = new nodo(new Float(0), inicio, info.get_h(inicio)); // Creamos el nodo inicial con coste 0, el id que le pasamos al método y la heurística asociada a esa ID
-		OpenList.add(inicial); // Lo añadimos a la lista para estudiarlo
+		Nodos_analizar.add(inicial); // Lo añadimos a la lista para estudiarlo
 		int LastID = inicio; // Esta variable se usa para ver cual fue la última ID estudiada
 		nodo menor = inicial; // En este nodo se guardará el menor nodo con costeheurística, en la primera iteración es el inicial
 		Analizados = 0; // Inicializamos el número de nodos analizados
@@ -25,31 +25,31 @@ public class AStar {
 		if (inicio == fin) {
 			Analizados = 1; // Si el nodo inicial y el final es el mismo ponemos que solo se ha analizado 1 nodo
 		}
-		while ((LastID != fin) && (OpenList.size() != 0)) { // Empezamos el algoritmo siempre y cuando la lista no esté vacia o el nodo inicial y final no coincidan
+		while ((LastID != fin) && (Nodos_analizar.size() != 0)) { // Empezamos el algoritmo siempre y cuando la lista no esté vacia o el nodo inicial y final no coincidan
 			int indice_menor = 0; // Usamos esta variable para ver el índice dentro de los vectores del nodo menor
-			for (int i = 1; i < OpenList.size(); i++) { // Empezamos a recorrer la lista
-				if (OpenList.get(i).get_ch() < OpenList.get(indice_menor).get_ch()) { // Miramos si el nodo i de la lista tiene un costeheurística menor que el nodo menor
+			for (int i = 1; i < Nodos_analizar.size(); i++) { // Empezamos a recorrer la lista
+				if (Nodos_analizar.get(i).get_ch() < Nodos_analizar.get(indice_menor).get_ch()) { // Miramos si el nodo i de la lista tiene un costeheurística menor que el nodo menor
 					indice_menor = i; // Ponemos el nodo i como el nodo menor si la línea anterior se cumple
 				} else {
-					if (Float.compare((OpenList.get(i).get_ch()), (OpenList.get(indice_menor).get_ch())) == 0 ? true: false) { // Miramos si los costeheurísticas de ambos nodos son iguales
-						if (info.get_h(OpenList.get(i).get_id()) < info.get_h(OpenList.get(indice_menor).get_id())) { // Miramos que nodo tiene la heurística menor
+					if (Float.compare((Nodos_analizar.get(i).get_ch()), (Nodos_analizar.get(indice_menor).get_ch())) == 0 ? true: false) { // Miramos si los costeheurísticas de ambos nodos son iguales
+						if (info.get_h(Nodos_analizar.get(i).get_id()) < info.get_h(Nodos_analizar.get(indice_menor).get_id())) { // Miramos que nodo tiene la heurística menor
 							indice_menor = i; // Cogemos el nodo con la menor heurística
 						}
 					}
 				}
 			}
 
-			menor = OpenList.get(indice_menor); // Cogemos el nodo menor para la siguiente iteración
+			menor = Nodos_analizar.get(indice_menor); // Cogemos el nodo menor para la siguiente iteración
 			LastID = menor.get_id();  // Actualizamos el LastID
 			if (menor.get_id() == fin) { // Miramos si el nodo menor es el nodo final
 				Analizados++; // Subimos el contador de analizados
-				OpenList.remove(indice_menor); // Lo borramos de la lista para analizar
+				Nodos_analizar.remove(indice_menor); // Lo borramos de la lista para analizar
 			} else { // No es el nodo final
 				Analizados++; // Subimos el contador de nodos analizados
-				int old_size = OpenList.size(); // Cogemos el tamaño de la lista actualmente
-				menor.generar_hijos(info, OpenList); // Generamos a los hijos del nodo menor, por ende cambiamos el tamaño de la lista de nodos a analizar
-				Generados += OpenList.size() - old_size; // Calculamos cuantos nodos se han generado en esta iteración
-				OpenList.remove(indice_menor); // Borramos de la lista el nodo que acabamos de analizar
+				int tamano_anterior = Nodos_analizar.size(); // Cogemos el tamaño de la lista actualmente
+				menor.generar_hijos(info, Nodos_analizar); // Generamos a los hijos del nodo menor, por ende cambiamos el tamaño de la lista de nodos a analizar
+				Generados += Nodos_analizar.size() - tamano_anterior; // Calculamos cuantos nodos se han generado en esta iteración
+				Nodos_analizar.remove(indice_menor); // Borramos de la lista el nodo que acabamos de analizar
 
 			}
 		}
@@ -135,7 +135,7 @@ public class AStar {
 		// Empezamos a calcular el tiempo de ejecución
 		double inicio = System.currentTimeMillis();
 		// Realizamos la búsqueda 
-		Busqueda.Search(nodo_ini, nodo_fin);
+		Busqueda.Busqueda_AStar(nodo_ini, nodo_fin);
 		keyboard.close();
 		double fin = System.currentTimeMillis();
 		// Calculamos cuanto ha tardado la búsqueda en realizarse

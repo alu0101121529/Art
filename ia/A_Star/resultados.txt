@@ -1,71 +1,66 @@
 
+---------------------------------------------------------------------------------------------------------------------------------
 Fichero de caminos: Grafo1.txt	Fichero de Heurísticas: Grafo1Heuristica1.txt
                Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
                   15                   19                    1                    8                   64                   43                 43.0 
 camino: 1 -> 2 -> 4 -> 12 -> 5 -> 13 -> 8
 
-Fichero de caminos: Grafo1.txt	Fichero de Heurísticas: Grafo1Heuristica2.txt
-               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  15                   19                    1                    8                  106                   79                 43.0 
-camino: 1 -> 2 -> 4 -> 12 -> 5 -> 13 -> 8
-
-Fichero de caminos: Grafo2.txt	Fichero de Heurísticas: Grafo2Heuristica1.txt
-               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  15                   19                    2                   14                   90                   65                 41.0 
-camino: 2 -> 4 -> 12 -> 5 -> 13 -> 8 -> 14
-
-Fichero de caminos: Grafo2.txt	Fichero de Heurísticas: Grafo2Heuristica2.txt
-               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  15                   19                    2                   14                   95                   67                 41.0 
-camino: 2 -> 4 -> 12 -> 5 -> 13 -> 8 -> 14
-
-Fichero de caminos: Grafo3.txt	Fichero de Heurísticas: Grafo3Heuristica1.txt
-               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  20                   25                    1                   15                   70                   53                 40.0 
-camino: 1 -> 2 -> 4 -> 8 -> 16 -> 15
-
-Fichero de caminos: Grafo3.txt	Fichero de Heurísticas: Grafo3Heuristica2.txt
-               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  20                   25                    1                   15                   70                   53                 40.0 
-camino: 1 -> 2 -> 4 -> 8 -> 16 -> 15
-
-Fichero de caminos: Grafo4.txt	Fichero de Heurísticas: Grafo4Heuristica1.txt
-               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  20                   25                   10                   18                   34                   24                 31.0 
-camino: 10 -> 5 -> 3 -> 2 -> 4 -> 18
-
-Fichero de caminos: Grafo4.txt	Fichero de Heurísticas: Grafo4Heuristica2.txt
-               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  20                   25                   10                   18                   31                   21                 31.0 
-camino: 10 -> 5 -> 3 -> 2 -> 4 -> 18
-
-Fichero de caminos: GrafoRumania.txt	Fichero de Heurísticas: GrafoRumaniaHeuristica.txt
-               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  20                   21                    1                    2                   25                   21                540.0 
-camino: 1 -> 20 -> 15 -> 3 -> 14 -> 2
-
-Fichero de caminos: Grafo1.txt	Fichero de Heurísticas: Grafo1Heuristica1.txt
-               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  15                   19                    1                   11                   21                   10                 19.0 
-camino: 1 -> 3 -> 11
-
+---------------------------------------------------------------------------------------------------------------------------------
 Fichero de caminos: Grafo1.txt	Fichero de Heurísticas: Grafo1Heuristica1.txt
                Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
                   15                   19                    2                    8                   39                   27                 34.0 
 camino: 2 -> 4 -> 12 -> 5 -> 13 -> 8
 
+---------------------------------------------------------------------------------------------------------------------------------
 Fichero de caminos: Grafo1.txt	Fichero de Heurísticas: Grafo1Heuristica1.txt
                Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
-                  15                   19                    4                   12                   12                    4                  7.0 
-camino: 4 -> 12
+                  15                   19                    1                   11                   21                   10                 19.0 
+camino: 1 -> 3 -> 11
 
+---------------------------------------------------------------------------------------------------------------------------------
+Fichero de caminos: Grafo1.txt	Fichero de Heurísticas: Grafo1Heuristica2.txt
+               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
+                  15                   19                    1                    8                  106                   79                 43.0 
+camino: 1 -> 2 -> 4 -> 12 -> 5 -> 13 -> 8
+
+---------------------------------------------------------------------------------------------------------------------------------
 Fichero de caminos: Grafo1.txt	Fichero de Heurísticas: Grafo1Heuristica2.txt
                Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
                   15                   19                    2                    8                   66                   47                 34.0 
 camino: 2 -> 4 -> 12 -> 5 -> 13 -> 8
 
+---------------------------------------------------------------------------------------------------------------------------------
 Fichero de caminos: Grafo1.txt	Fichero de Heurísticas: Grafo1Heuristica2.txt
                Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
                   15                   19                    1                   11                   17                    8                 19.0 
 camino: 1 -> 3 -> 11
 
+---------------------------------------------------------------------------------------------------------------------------------
+Fichero de caminos: GrafoRumania.txt	Fichero de Heurísticas: GrafoRumaniaHeuristica.txt
+               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
+                  20                   21                    1                    2                   25                   21                540.0 
+camino: 1 -> 20 -> 15 -> 3 -> 14 -> 2
+
+---------------------------------------------------------------------------------------------------------------------------------
+Fichero de caminos: Grafo3.txt	Fichero de Heurísticas: Grafo3Heuristica1.txt
+               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
+                  20                   25                    1                   15                   70                   53                 40.0 
+camino: 1 -> 2 -> 4 -> 8 -> 16 -> 15
+
+---------------------------------------------------------------------------------------------------------------------------------
+Fichero de caminos: Grafo3.txt	Fichero de Heurísticas: Grafo3Heuristica1.txt
+               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
+                  20                   25                    2                    7                   45                   30                 26.0 
+camino: 2 -> 4 -> 8 -> 7
+
+---------------------------------------------------------------------------------------------------------------------------------
+Fichero de caminos: Grafo3.txt	Fichero de Heurísticas: Grafo3Heuristica1.txt
+               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
+                  20                   25                    3                    9                   27                   18                 19.0 
+camino: 3 -> 6 -> 9
+
+---------------------------------------------------------------------------------------------------------------------------------
+Fichero de caminos: Grafo4.txt	Fichero de Heurísticas: Grafo4Heuristica1.txt
+               Nodos              Aristas         Nodo inicial           Nodo final            Generados           Analizados                Coste 
+                  20                   25                   10                   18                   34                   24                 31.0 
+camino: 10 -> 5 -> 3 -> 2 -> 4 -> 18
